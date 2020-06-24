@@ -1,0 +1,54 @@
+p {
+    font-family: 'Concert One', cursive;
+}
+
+/* pseudo classes examples */
+.hover-purple:hover {
+    color: purple; 
+}
+
+.icon-lg {
+    font-size: 100px;
+}
+
+#magic-button {
+    height: 200px;
+    width: 400px;
+}
+
+#magic-button:active {
+    background-image: url("http://www.placebacon.com/400/200");
+}
+
+a:focus {
+    color: limegreen;
+}
+
+p::selection {
+    color: limegreen;
+    background-color: transparent;
+}
+
+.thought1 {
+    font-weight: bold;
+}
+
+.thought2 {
+    font-size: 24px;
+}
+
+.thought3 {
+    line-height: 50px;
+}
+
+
+h3,
+h4 {
+    font-family: 'Roboto', sans-serif;
+    color: purple;
+}
+
+h1, 
+h2 {
+    font-family: 'Odibee Sans', cursive;
+}
