@@ -37,7 +37,7 @@ img {
   border-radius: 8px;
 }
 
-@media (max-width: 740px) {
+@media (max-width: 540px) {
   img {
     width: 48%;
   }

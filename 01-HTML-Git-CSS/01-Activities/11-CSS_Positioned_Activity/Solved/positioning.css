@@ -4,8 +4,8 @@
 
 body {
   font-size: 24px;
-  line-height: 32px;
-  color: #333;
+  line-height: 32px;  
+  color: black;
 }
 
 #fixed {
@@ -15,7 +15,7 @@ body {
   padding: 40px;
   margin: 0;
   text-align: center;
-  background: #eee;
+  background: yellow;
 }
 
 .wrapper {
@@ -24,16 +24,11 @@ body {
   margin: 0 auto;
 }
 
-h1 {
-  margin-bottom: 20px;
-  font-size: 36px;
-  line-height: 45px;
-}
-
 p {
   margin-bottom: 20px;
   font-size: 18px;
-  line-height: 28px;
+  line-height: 38px;
+  background-color: lightcoral;
 }
 
 #relative {
@@ -42,7 +37,8 @@ p {
   padding: 20px;
   margin-bottom: 20px;
   text-align: center;
-  background: #eee;
+  background: red;
+  color: blue;
 }
 
 #absolute {
@@ -52,5 +48,13 @@ p {
   width: 250px;
   padding: 20px;
   text-align: center;
-  background: #999;
+  background: blue;
+  color: red;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 36px;
+  line-height: 45px;
+  color: lightcoral;
 }

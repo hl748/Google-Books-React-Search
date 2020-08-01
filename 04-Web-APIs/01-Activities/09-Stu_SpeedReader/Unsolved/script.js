@@ -1,9 +1,44 @@
 var poem = "Some say the world will end in 🔥, Some say in ice. From what I’ve tasted of desire, I hold with those who favor fire. But if it had to perish twice, I think I know enough of hate. To say that for destruction ice, Is also great, And would suffice.";
+var words = poem.split(" ");
+
+var heading = document.getElementById("welcome");
+var heading2 = document.getElementById("countdown");
+var main = document.getElementById("main");
+var bodyEl = document.createElement("div");
+
+var i = 0;
 
 function prepareRead() {
-  // Create the countdown timer.
+  var timeLeft = 5;
+
+  var timeInterval = setInterval(function() {
+    main.textContent = timeLeft + " seconds remaining";
+    timeLeft--;
+
+    if (timeLeft === 0) {
+      main.textContent = "";
+      speedRead();
+      clearInterval(timeInterval);
+    }
+
+  }, 1000);
 }
 
+
+
 function speedRead() {
-  // Print words to the screen one at a time.
+  heading2.append(bodyEl);
+
+  var poemInterval = setInterval(function() {
+    if (words[i] === undefined) {
+      clearInterval(poemInterval);
+    } else {
+      heading2.textContent = words[i];
+      i++;
+    }
+
+  }, 1000);
 }
+
+
+prepareRead();

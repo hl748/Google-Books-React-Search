@@ -34,12 +34,19 @@
     <script type="text/javascript">
       // Initial array of movies
       var movies = ["The Matrix", "The Notebook", "Mr. Nobody", "The Lion King"];
-
       // Function for dumping the JSON content for each button into the div
       function displayMovieInfo() {
 
-        // YOUR CODE GOES HERE!!! HINT: You will need to create a new div to hold the JSON.
+       var movie = $(this).attr("data-name")
+    var queryURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=trilogy";
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+      }).then(function (response) {
+        $(".movie").text(JSON.stringify(response))
+        $(movieInfo).text(stringResponse)
 
+      })
       }
 
       // Function for displaying movie data
@@ -61,6 +68,7 @@
           a.attr("data-name", movies[i]);
           // Providing the initial button text
           a.text(movies[i]);
+
           // Adding the button to the buttons-view div
           $("#buttons-view").append(a);
         }
@@ -75,6 +83,7 @@
 
         // The movie from the textbox is then added to our array
         movies.push(movie);
+        console.log(movies);
 
         // Calling renderButtons which handles the processing of our movie array
         renderButtons();

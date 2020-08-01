@@ -1,5 +1,19 @@
-/**
- * Google Fonts Demo
- **/
+h1 {
+font-family: 'Metal Mania', cursive;
+}
 
-/* Add in the Google Fonts of your choice */
+button:focus {
+    background-color: blue;
+}
+
+p {
+    font-family: 'MuseoModerno', cursive;
+}
+
+.fonts {
+    font-family: 'Krona One', sans-serif;
+}
+
+.fontfam {
+    font-family: 'Amatic SC', cursive;
+}

@@ -8,24 +8,24 @@
 
     <script type="text/javascript">
 
-      // ????
+      // favTVshows is an empty variable waiting to be filled with a response. tvShows is what holds the response
       var favTVshows = [];
       var tvShow;
 
-      // For Loop Elements Repeats ??? Times
+      // For Loop Elements Repeats 3 Times
       for (var i = 1; i < 4; i++) {
 
-        // ????
+        // Asks what your #(number that loop is on[1-3]) favorite TV show is?
         tvShow = prompt("What's your #" + i + " favorite TV show?");
 
-        // ????
+        // pushes the tvShows variable into the favTVshows variable
         favTVshows.push(tvShow);
       }
 
-      // ????
+      // repeats a loop for as many times as the length of the favTVshows array which is 3
       for (var j = 0; j < favTVshows.length; j++) {
 
-        // ???
+        // alerts the user what is in the favorite TV shows array
         alert(favTVshows[j]);
       }
 

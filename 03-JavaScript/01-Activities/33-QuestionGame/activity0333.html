@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var questions = [{q: "How many states are there in the US?", a: "50 states"},
+                         {q: "'What is the most populous state in the US?''", a: "california"},
+                         {q: "What is the most northern state in the US?", a: "alaska"},
+                         {q: "What is the last state to be admitted into the US?", a: "alaska"},
+                         {q: "Which US state is located in the pacific ocean?", a: "hawaii"},
+                         {q: "Which US state is Omaha located in?", a: "nebraska"},
+                         {q: "Which US state is Augusta located in?", a: "georgia"},
+                         {q: "Which US state is Atlanta located in?", a: "georgia"},
+                         {q: "Which country is located above the US?", a: "canada"},
+                         {q: "Which country is located below the US?", a: "mexico"}
+    ]
+    for (var i = 0; i<questions.length; i++) {
+        var answer = prompt(questions[i].q);
+        if ((answer.toLowerCase()) === questions[i].a) {
+            alert("Correct!");
+        }
+        else {
+            alert("Incorrect!");
+        }
+    }
+
+    </script>
+</body>
+</html>

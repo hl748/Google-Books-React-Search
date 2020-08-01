@@ -56,6 +56,11 @@
           </div>
         </div>
       </div>
+      <div>
+      <input type="hidden" id="operation" value="">
+      <input type="text" id="answer" value="">
+      </div>
+
 
       <!-- Result Card -->
       <div class="col-lg-6">
@@ -79,10 +84,74 @@ $(document).ready(function() {
 
 // Your code here...
 
+$("#button-1").on("click", function () {
+  $("#first-number").append("1")
+})
+$("#button-2").on("click", function () {
+  $("#first-number").append("2")
+})
+$("#button-3").on("click", function () {
+  $("#first-number").append("3")
+})
+$("#button-4").on("click", function () {
+  $("#first-number").append("4")
+})
+$("#button-5").on("click", function () {
+  $("#first-number").append("5")
+})
+$("#button-6").on("click", function () {
+  $("#first-number").append("6")
+})
+$("#button-7").on("click", function () {
+  $("#first-number").append("7")
+})
+$("#button-8").on("click", function () {
+  $("#first-number").append("8")
+})
+$("#button-9").on("click", function () {
+  $("#first-number").append("9")
+})
+$("#button-divide").on("click", function () {
+  $("#first-number").append("/")
+})
+$("#button-multiply").on("click", function () {
+  $("#first-number").append("x")
+})
+$("#button-plus").on("click", function () {
+  $("#first-number").append("+")
+})
+$("#button-minus").on("click", function () {
+  $("#first-number").append("-")
+})
+$("#button-equal").on("click", function () {
+  console.log(window.innerHTML);
+})
+$("#button-power").on("click", function () {
+  $("#first-number").append("^")
+})
+$("#button-clear").on("click", function () {
+  $("#first-number").text(" ")
+})
+})
+$('#subtract').click(function(e) { 
+	
+  // if($('#answer').val() == ''){
+  //   return false;	
+  //   $('#equals').attr('onclick','');
+  // }
+  // else if ( $('#button-equal').attr('class') == 'activeAnswer') {
+  //   $('#button-equal').val( $('#operation').val() + $('#subtract').val() );
+  //   $('#answer').val('');
+  //   $('#equals').attr('onclick','');
+  // }
+  // else{
+  //   $('#button-equal').val( $('#button-equal').val() + $('#answer').val() + $('#subtract').val() );
+  //   $('#answer').val('');
+  //   $('#equals').attr('onclick','');
+  // }
+
 
 });
-
 </script>
 
-</body>
 </html>

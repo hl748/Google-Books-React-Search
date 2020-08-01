@@ -21,7 +21,13 @@
     <div class="text-center">
 
       <!-- Here we have our button for generating random numbers (#random-button) -->
-      <button id="random-button" class="btn btn-primary btn-lg"><h1><span class="fa fa-question"></span></h1></button>
+      <button id="random-button" class="btn btn-primary btn-lg">
+      
+        <h1>
+          <span class="fa fa-question"></span>
+        </h1>
+      
+      </button>
       
     </div>
 
@@ -36,7 +42,14 @@
 
       // CREATE THE MISSING CODE HERE. Your code should add content to the random-number div.
       // ...
-
+        $("#random-button").on("click", function () {
+          $("#random-number").text("");
+          for (var i = 0; i < 9; i++) {
+          var random = Math.floor(Math.random() * 10);
+          $("#random-number").append(random);
+          }
+        })
+        
 
       // ...
 

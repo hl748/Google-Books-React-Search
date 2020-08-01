@@ -1,4 +1,5 @@
 var imageContainer = document.querySelector(".img-container");
+var element = document.getElementById("1");
 
 imageContainer.addEventListener("click", function(event) {
   var element = event.target;

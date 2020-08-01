@@ -38,7 +38,7 @@
       // Generic function for capturing the movie name from the data-attribute
       function alertMovieName() {
 
-        // YOUR CODE GOES HERE!!!
+        
 
       }
 
@@ -65,6 +65,52 @@
           $("#buttons-view").append(a);
         }
       }
+      var areThey = confirm("Are P and T stupid beyond what anyone says?")
+      if (areThey === true){
+        alert("You are correct!")
+      }
+      else {
+        alert("Oh no friend! You are so very wrong. Can I teach you my good friend?")
+        var select = confirm("Press OK for yes, and cancel for no! That's how this works.")
+        if (select === true){
+          alert("Good.")
+          var whatYouKnow = confirm("Tell me what you know already.")
+          alert("You already know that: " + whatYouKnow )
+        }
+        else {
+          alert("Oh my goodness, I just hope you find out one day.")
+        }
+      }
+       
+      
+      console.log("Hello World")
+        alert("Hello World!")
+        var goodDay = confirm("Are you doing good today?")
+        if (goodDay === true){
+          alert("That's great!")
+          var reason = prompt("What makes it a good day for you?")
+          alert("It is a good day for you because " + reason)
+        }
+        else {
+          alert("Oh no! Why is that?")
+          var reasonBad = prompt("Tell me why:")
+          alert("It is because " + reasonBad)
+          
+        }
+      console.log("Hello World")
+        alert("Hello World!")
+        var goodDay = confirm("Are you doing good today?")
+        if (goodDay === true){
+          alert("That's great!")
+          var reason = prompt("What makes it a good day for you?")
+          alert("It is a good day for you because " + reason)
+        }
+        else {
+          alert("Oh no! Why is that?")
+          var reasonBad = prompt("Tell me why:")
+          alert("It is because " + reasonBad)
+          
+        }
 
       // This function handles events where one button is clicked
       $("#add-movie").on("click", function(event) {

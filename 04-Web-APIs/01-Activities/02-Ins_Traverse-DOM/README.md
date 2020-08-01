@@ -10,6 +10,7 @@
 
 * document.body (body)
 
+
  * We can use these as starting points to begin moving our way down the DOM tree.
 
 * Navigate to the MDN Docs on [The DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)

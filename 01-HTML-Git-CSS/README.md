@@ -2,7 +2,7 @@
 
 ## Overview
 
-Congratulations! This is the first step in your journey towards a career in full-stack web development. There are many paths that you can take in this field and this unit is the foundation for all of them. Every full-stack web developer must master HTML and CSS, as well as learn how to program browsers, servers, and databases. 
+Congratulations! This is the first step in your journey towards a career in full-stack web development. There are many paths that you can take in this field and this unit is the foundation for all of them. Every full-stack web developer must master HTML and CSS, as well as learn how to program browsers, servers, and databases.  
 
 You have several choices for the programming language that you use for building and deploying full-stack web applications, including JavaScript, PHP, and Python. This course focuses on JavaScript. We’ll use it to program both the browser (aka the client) and the server.
 
@@ -60,7 +60,7 @@ You will be employer-competitive if you are able to:
 * Explain the "cascading" in Cascading Style Sheets and implement the box model for HTML elements
 * Explain the value of version control and use Git workflow to initialize projects, track changes, and host via remote server
 * Perform common commands via the command line to interface with the operating system, such as navigating the file tree and creating and deleting files and directories
-* Execute live deployment using GitHub Pages
+* Execute live deployment using GitHub Pages  
 
 ## Homework: Code Refactor
 

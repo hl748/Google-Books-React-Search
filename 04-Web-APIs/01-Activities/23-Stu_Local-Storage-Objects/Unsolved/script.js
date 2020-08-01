@@ -8,6 +8,20 @@ var userFirstNameSpan = document.querySelector("#user-first-name");
 var userLastNameSpan = document.querySelector("#user-last-name");
 var userEmailSpan = document.querySelector("#user-email");
 var userPasswordSpan = document.querySelector("#user-password");
+var header = document.getElementById("1");
+
+header.addEventListener("click", function(){
+  alert("You have clicked on msg!");
+  var reason = prompt("Why did you click on message?");
+  alert("You clicked on message because" + reason);
+  var confirm = confirm("Are you sure?")
+  if (confirm === true) {
+    alert("Well okay then!");
+  }
+  else {
+    alert("Well then why the heck did you do that?");
+  }
+})
 
 function displayMessage(type, message) {
   msgDiv.textContent = message;

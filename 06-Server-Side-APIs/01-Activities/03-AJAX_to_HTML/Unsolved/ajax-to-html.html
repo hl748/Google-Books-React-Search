@@ -11,7 +11,7 @@
   <div class="container">
     <h2>Basic Table</h2>
     <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
-    <table class="table">
+    <table id="table">
       <thead>
         <tr>
           <!-- The scope attribute specifies that this is a header for a column -->
@@ -42,12 +42,73 @@
     }).then(function(response) {
 
       // Create and save a reference to new empty table row
+
+      var row = $("<tr>") ;
+
       // Create and save references to 3 td elements containing the Title, Year, and Actors from the AJAX response object
+     
+        var td1 = $("<td>").text(response.Title)
+        var td2 = $("<td>").text(response.Year)
+        var td3 = $("<td>").text(response.Actors)
+
       // Append the td elements to the new table row
+      row.append(td1, td2, td3)
+      
       // Append the table row to the tbody element
+      $("#table tbody").append(row)
+ 
     });
 
     // Repeat the above logic to add rows for two more movies of your choice
+    var movie1 = "Guardians of the Galaxy";
+    var queryURL1 = "https://www.omdbapi.com/?t=" + movie1 + "&apikey=trilogy";
+    $.ajax({
+      url: queryURL1,
+      method: "GET"
+    }).then(function(response) {
+
+      // Create and save a reference to new empty table row
+
+      var row = $("<tr>") ;
+
+      // Create and save references to 3 td elements containing the Title, Year, and Actors from the AJAX response object
+     
+        var td1 = $("<td>").text(response.Title)
+        var td2 = $("<td>").text(response.Year)
+        var td3 = $("<td>").text(response.Actors)
+
+      // Append the td elements to the new table row
+      row.append(td1, td2, td3)
+      
+      // Append the table row to the tbody element
+      $("#table tbody").append(row)
+ 
+    });
+
+    var movie2 = "Inception";
+    var queryURL2 = "https://www.omdbapi.com/?t=" + movie2 + "&apikey=trilogy";
+    $.ajax({
+      url: queryURL2,
+      method: "GET"
+    }).then(function(response) {
+
+      // Create and save a reference to new empty table row
+
+      var row = $("<tr>") ;
+
+      // Create and save references to 3 td elements containing the Title, Year, and Actors from the AJAX response object
+     
+        var td1 = $("<td>").text(response.Title)
+        var td2 = $("<td>").text(response.Year)
+        var td3 = $("<td>").text(response.Actors)
+
+      // Append the td elements to the new table row
+      row.append(td1, td2, td3)
+      
+      // Append the table row to the tbody element
+      $("#table tbody").append(row)
+ 
+    });
 
     // BONUS: Once complete, try to make your code as DRY as possible through the use of functions
   </script>

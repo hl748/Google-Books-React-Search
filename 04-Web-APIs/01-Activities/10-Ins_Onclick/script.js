@@ -7,7 +7,7 @@ themeSwitcher.addEventListener("click", function() {
     mode = "light";
     container.setAttribute("class", "light");
   }
-  else {
+  else if (mode === "light") {
     mode = "dark";
     container.setAttribute("class", "dark");
   }

@@ -19,7 +19,7 @@ function prepareRead() {
 
     if (timeLeft === 0) {
       timerEl.textContent = "";
-      speedRead();
+      speedRead();``
       clearInterval(timeInterval);
     }
 

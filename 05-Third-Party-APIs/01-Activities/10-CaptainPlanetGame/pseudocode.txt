@@ -1,0 +1,9 @@
+#Pseudocode Captain Planet
+
+1. We need html (specifically cards and buttons, plus our captain planet image)
+2. Link our jQuery CDN
+3. We need to be sure that every button had a unique class/id
+4. We need to target those classes/ids and create our click events for them
+5. The handler/callback function for this click event
+6. In the handler/callback function we need to modify our images/css in some way
+    utilize the jQuery .animate() method to make our superpowers more appealing

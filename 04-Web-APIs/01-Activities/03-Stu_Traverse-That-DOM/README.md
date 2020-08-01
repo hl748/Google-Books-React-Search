@@ -24,7 +24,7 @@ In this activity you are going to use the Chrome Dev Console and `.style.propert
 
     * Change its first child element to have a font color of `orange`.
     
-    * Change its last child elements parent to have a font size of `40px`.
+    * Change its last child elements parent to have a font size of `40px`. 
 
 ## Bonus
 

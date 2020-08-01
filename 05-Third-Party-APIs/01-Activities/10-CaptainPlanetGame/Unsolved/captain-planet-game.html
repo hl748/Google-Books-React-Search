@@ -87,6 +87,18 @@
         </div>
       </div>
 
+      <div id="radioactiveControls" class="card">
+        <h4 class="card-header">Superpowers - Radiation!</h4>
+        <div class="card-body">
+          <div class="text-center">
+            <button class="btn btn-dark btn-lg radioactivate">
+              <span class="fa fa-eye"></span> Radio-activate</button>
+            <button class="btn btn-info btn-lg normalRadioactivate">
+              <span class="fa fa-eye-slash"></span> Normal</button>
+          </div>
+        </div>
+      </div>
+
       <!-- Right Card (Captain Planet Hero)-->
       <div class="col-lg-6">
 
@@ -133,6 +145,17 @@
     $(".invis-button").on("click", function() {
       captainPlanet.animate({ opacity: "0.05" });
     });
+
+    // Radioactivity
+    $(".radioactivate").on("click", function(){
+      captainPlanet.animate({ });
+    });
+
+    $(".normalRadioactivate").on("click", function(){
+      captainPlanet.animate({ });
+    });
+
+
 
     // Move Buttons
     $(".up-button").on("click", function() {

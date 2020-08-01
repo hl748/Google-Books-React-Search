@@ -1,17 +1,28 @@
-// var pTags = document.querySelectorAll("p");
-// var divTags = document.querySelectorAll("div");
-// var aTags = document.querySelectorAll("a");
-// var imgEl = document.querySelectorAll("img");
-// var changeP = document.querySelector("#change2");
+var pTags = document.querySelectorAll("p");
+var divTags = document.querySelectorAll("div");
+var aTags = document.querySelectorAll("a");
+var imgEl = document.querySelectorAll("img");
+var changeP = document.querySelector("#change2");
 
-// console.log(pTags);
+console.log(pTags);
 
-// pTags[0].setAttribute("style", "font-size: 65px;");
-// changeP.setAttribute("style", "color:blue; border:2px solid black;");
-// aTags[0].setAttribute("href", "https://github.com");
-// imgEl[0].setAttribute("src", "images/image_1.jpg");
-// imgEl[0].setAttribute("style", "width:500px; height:200px;");
+pTags[0].setAttribute("style", "font-size: 65px;");
+changeP.setAttribute("style", "color:blue; border:2px solid black;");
+aTags[0].setAttribute("href", "https://github.com");
+imgEl[0].setAttribute("src", "images/image_1.jpg");
+imgEl[0].setAttribute("style", "width:500px; height:200px;");
 
-// for (var i = 0; i < divTags.length; i++) {
-//   divTags[i].setAttribute("style", "text-decoration:underline; color:red;");
-// }
+for (var i = 0; i < divTags.length; i++) {
+  divTags[i].setAttribute("style", "text-decoration:underline; color:red;");
+}
+
+while (value !== null) {
+    if(value2 === something) {
+        alert("You have a value!");
+        prompt("What would you like to have next?");
+    }
+    else {
+        alert("You don't get a value! Sorry!");
+        prompt("What are you gonna do about it?");
+    }
+}
