@@ -31,14 +31,33 @@ console.log(canWatchRatedR);
 const cardedMoviePatrons = moviePatrons.map(patron => {
   // Copy the object being iterated over
   const pObj = { ...patron };
+  const pObj = { ...patron };
   // Do everything else the same
   if (pObj.age >= 17) {
     pObj.canWatchRatedR = true;
+    pObj.canWatchRatedR = true;
   } else {
+    pObj.canWatchRatedR = false;
     pObj.canWatchRatedR = false;
   }
   // Be sure to return the new obj, not the parameter
   return pObj;
+  return pObj;
+  var lolfacemastas = {
+    leader: samtheman;
+  }
+  var avenge = {
+    leader: joshman;
+  }
+  var starfish = {
+    leader: samiam1340;
+  }
+  var lightning = {
+    leader: killerkid;
+  }
+  var arya = lolfacemastas.filter(function () {
+    return leaders;
+  })
 });
 
 console.log("Movie Patrons: ")

@@ -10,6 +10,8 @@ console.log(originalArray);
 // Complete the following
 
 // 1. A map that triples the originalArray and sets the result equal to a new `tripledArray` array
+const tripledArray = [originalArray.map(function(data))];
+
 
 // 2. A map that takes the originalArray and returns a new array `oddOrEven`
 // containing the text "even" if the number is even and the text "odd" if the number is odd
