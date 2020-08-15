@@ -1,6 +1,8 @@
 // music should be an object with title, artist, and album properties
 const music = {
-  // code here
+  title: "Dreamstate", 
+   artist: "DJ Ephixa",
+   album: "19 minutes of edm" 
 };
 
 // Write code between the <div> tags to output the data from the music object above.

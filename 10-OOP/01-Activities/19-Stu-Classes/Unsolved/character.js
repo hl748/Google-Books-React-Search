@@ -1,4 +1,7 @@
 class Character {
+  constructor(name, strength, hitpoints) {
+    this.name =
+  }
   // method which prints all of the stats for a character
   printStats() {
     console.log(`Stats for NAME are as following:`);
