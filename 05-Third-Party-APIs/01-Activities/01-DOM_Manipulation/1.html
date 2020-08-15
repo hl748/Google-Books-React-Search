@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Basic JavaScript Dump</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Basic JavaScript Dump</title>
+    <style>
+      .fancy {
+        font-size: 200px;
+        background-color: green;
+        color: snow;
+      }
+    </style>
+  </head>
   <body>
-
     <!-- We created an empty HTML div. Note that there is no content inside. -->
     <div id="empty-div"></div>
-
+    <script>
+      //I can "grab" existing elements
+      var emptyDiv = document.querySelector("#empty-div");
+      //I can give them text
+      emptyDiv.textContent = "Hello World!";
+      //I can create new elements
+      var newDiv = document.createElement("div");
+      newDiv.textContent = "How are ya?";
+      //I can add style with 'setAttribute'
+      newDiv.setAttribute("style", "background-color: yellow");
+      //...or, I can use classes to set styles!!!
+      emptyDiv.setAttribute("class", "fancy");
+      //But I have to remember to send created elements to the page
+      document.body.appendChild(newDiv);
+    </script>
   </body>
 </html>

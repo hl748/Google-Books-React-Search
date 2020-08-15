@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Giphy API</title>
+</head>
+
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    // Example queryURL for Giphy API
+
+    //search for exactly 1 gif of Shaq (q=Shaq&limit=1):
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=Shaq&limit=1&api_key=dc6zaTOxFJmzC";
+
+    //search for 5 gifs of Shaq (q=Shaq&limit=5):
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=Shaq&limit=5&api_key=dc6zaTOxFJmzC";
+
+    //search for 5 gifs that are trending (limit=5):
+    //NOTE: our 'q' parameter won't work here!!! different endpoint = different parameters (most of the time)
+    var queryURL = "https://api.giphy.com/v1/gifs/trending?limit=5&api_key=dc6zaTOxFJmzC";
+
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+      console.log(response.data);
+    });
+
+  </script>
+
+</body>
+
+</html>
