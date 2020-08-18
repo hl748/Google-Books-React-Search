@@ -1,20 +1,20 @@
 // Dependencies
 // ===========================================================
-const express = require("express");
+var express = require("express");
 
-const app = express();
-const PORT = 3000;
+var app = express();
+var PORT = 3000;
 
 // Data
 // ===========================================================
-const yoda = {
+var yoda = {
   name: "Yoda",
   role: "Jedi Master",
   age: 900,
   forcePoints: 2000
 };
 
-const darthmaul = {
+var darthmaul = {
   name: "Darth Maul",
   role: "Sith Lord",
   age: 200,
@@ -31,15 +31,15 @@ const darthmaul = {
 
 // Routes
 // ===========================================================
-app.get("/", (req, res) => {
+app.get("/", function(req, res) {
   res.send("Welcome to the Star Wars Page!");
 });
 
-app.get("/yoda", (req, res) => {
+app.get("/yoda", function(req, res) {
   res.json(yoda);
 });
 
-app.get("/darthmaul", (req, res) => {
+app.get("/darthmaul", function(req, res) {
   res.json(darthmaul);
 });
 
@@ -53,6 +53,6 @@ app.get("/darthmaul", (req, res) => {
 
 // Listener
 // ===========================================================
-app.listen(PORT, () => {
+app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
 });
