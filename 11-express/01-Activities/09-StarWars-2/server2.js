@@ -1,12 +1,12 @@
 // Dependencies
 // ===========================================================
-const express = require("express");
+var express = require("express");
 
-const app = express();
-const PORT = 3000;
+var app = express();
+var PORT = 3000;
 
 // Data
-const characters = [{
+var characters = [{
   routeName: "yoda",
   name: "Yoda",
   role: "Jedi Master",
@@ -28,12 +28,12 @@ const characters = [{
 
 // Routes
 // ===========================================================
-app.get("/", (req, res) => {
+app.get("/", function(req, res) {
   res.send("Welcome to the Star Wars Page!");
 });
 
-app.get("/:character", (req, res) => {
-  const chosen = req.params.character;
+app.get("/:character", function(req, res) {
+  var chosen = req.params.character;
 
   // What does this log?
   console.log(chosen);
@@ -44,6 +44,6 @@ app.get("/:character", (req, res) => {
 
 // Listener
 // ===========================================================
-app.listen(PORT, () => {
+app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
 });
