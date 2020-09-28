@@ -5,8 +5,18 @@ const inquirer = require("inquirer");
 inquirer
   .prompt({
     message: "Enter your GitHub username",
-    name: "username"
+    name: "hl748"
   })
-  .then(function({ username }) {
-    const queryUrl = `https://api.github.com/users/${username}/repos?per_page=100`;
-  });
+  .then(function() {
+    const queryUrl = `https://api.github.com/users/hl748/repos?per_page=100`;
+  })
+
+  axios.get('queryUrl')
+  .then(function (response){
+    console.log(response.data)
+  })
+  .catch (function (error){
+    console.log(error)
+  }).then(function () {
+
+  })

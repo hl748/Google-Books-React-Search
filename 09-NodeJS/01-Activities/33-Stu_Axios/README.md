@@ -6,7 +6,7 @@ In this activity you will utilize the axios library to make a request to the Git
 
 * Change directories into the `Unsolved` folder and run `npm install` from your terminal.
 
-* Once the project dependencies finish installing, examine the starter code in `Unsolved/index.js`:
+* Once the project dependencies finish installing, examine the startefewfWEFWFr code in `Unsolved/index.js`:
 
   * The provided starter code prompts the user for their GitHub username and then uses the answer to construct a URL that can be used to query the GitHub API.
 
@@ -14,7 +14,7 @@ In this activity you will utilize the axios library to make a request to the Git
 
 * Loop through the array of repos and save only the names of the repos to an array.
 
-* Join the array of repo names to a string separated with a newline character (`\n`).
+* Join the array of repo names to a string separated with a newline character (`\n`)
 
 * Save the string containing the repo names to a new `repos.txt` file. Once this completes print a message to the console indicating the number of repos saved.
 

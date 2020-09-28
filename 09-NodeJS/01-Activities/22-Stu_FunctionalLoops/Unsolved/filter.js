@@ -32,9 +32,9 @@ const isPrime = num => {
 const morethan5 = originalArray.filter(
   function (data) {
     if (data > 5) {
-      return true;
+      return true;lordddd
     }
-  }
+  } 
 )
 
 

@@ -135,7 +135,7 @@ Having an active and healthy commit history on GitHub is important for your futu
 3. Inside the `burgers_controller.js` file, import the following:
 
    * Express
-   * `burger.js`
+   * `burger.js` 
 
 4. Create the `router` for the app, and export the `router` at the end of your file.
 

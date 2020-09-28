@@ -38,6 +38,7 @@ It is recommended that you follow this workflow:
 
 🎗 Remember, you can run the tests at any time with `npm run test`
 
+
 It is recommended that you start with a directory structure that looks like this:
 
 ```
@@ -51,6 +52,7 @@ test/          // jest tests
   Manager.test.js
 app.js         // Runs the application
 ```
+
 
 ### Hints
 
@@ -94,6 +96,7 @@ methods:
   * getId()
   * getEmail()
   * getRole() // Returns 'Employee'
+  
 
 The other three classes will extend `Employee`. 
 

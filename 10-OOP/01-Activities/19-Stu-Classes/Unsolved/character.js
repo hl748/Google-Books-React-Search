@@ -1,6 +1,8 @@
 class Character {
-  constructor(name, strength, hitpoints) {
-    this.name =
+  constructor(n, s, h) {
+    this.name = n;
+    this.strength = s;
+    this.hitpoints = h;
   }
   // method which prints all of the stats for a character
   printStats() {
@@ -8,6 +10,7 @@ class Character {
     console.log(`Each attack will do STRENGTH damage.`);
     console.log(`NAME has HITPOINTS hit points remaining!`);
     console.log("------------");
+    
   }
   // method which determines whether or not a character's "hitPoints" are less then zero
   // and returns true or false depending upon the outcome

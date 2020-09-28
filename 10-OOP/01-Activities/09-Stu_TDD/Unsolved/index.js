@@ -5,6 +5,8 @@ const algo = new Algo();
 const str1 = "Hello World!";
 const reversed = algo.reverse(str1);
 
+const example = "There is no need to be afraid to say anything"
+
 console.log(str1, "->", reversed);
 
 const str2 = "racacar";

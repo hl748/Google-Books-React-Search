@@ -12,6 +12,9 @@ CREATE TABLE favorite_foods (
   food VARCHAR(50) NOT NULL,
   -- Makes an numeric column called "score" --
   score INTEGER(10)
+  Error Code: 1175. You are using safe update mode and you tried to update a table without a WHERE that uses a KEY column.  To disable safe mode, toggle the option in Preferences -> SQL Editor and reconnect.
+0 row(s) affected, 1 warning(s): 1681 Integer display width is deprecated and will be removed in a future release.
+
 );
 
 CREATE TABLE favorite_songs (

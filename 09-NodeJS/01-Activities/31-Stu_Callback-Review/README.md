@@ -6,13 +6,15 @@ In this activity you will write code to read a file containing a list of dogs an
 
 * Open the `Unsolved/index.js` file and take a moment to examine the provided code:
 
-  * The `fs.readFile` method is being used to read the `animals.json` file.
+  * The `fs.readFile` method is being used to read the `animals.json` file
 
   * Since the JSON data retrieved using `fs.readFile` is a string, we're calling `JSON.parse` to parse the string to a JSON object.
 
+const
+
   * We're allocating two empty arrays called `dogs` and `cats`.
 
-* After understanding the provided code, write code to loop through `animalJSON` and for each animal object, check its `species` property. If an animal is a `dog`, push it to the `dogs` array, else push it to the `cats` array.
+* After understanding the provided code, write code to lo p through `animalJSON` and for each animal object, check its `species` property. If an animal is a `dog`, push it to the `dogs` array, else push it to the `cats` array.
 
 * After looping through every animal, convert both the `dogs` and `cats` arrays to JSON strings using `JSON.stringify`. Save the stringified versions of the arrays to new variables.
 

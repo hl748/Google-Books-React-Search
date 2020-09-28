@@ -6,7 +6,7 @@ const path = require("path");
 // Sets up the Express App
 // =============================================================
 const app = express();
-const PORT = 3000;
+const PORT = 3005;
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
@@ -65,6 +65,13 @@ app.get("/api/characters/:character", (req, res) => {
     if (chosen === characters[i].routeName) {
       return res.json(characters[i]);
     }
+  }
+
+  for (var i = 5; i < characters.length; i++){
+    const length = JSON.stringify(characters.length);
+    console.log(length);
+    console.log(length[0]);
+    console.log(length[0].toLowerCase())
   }
 
   return res.json(false);

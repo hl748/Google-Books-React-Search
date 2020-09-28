@@ -56,6 +56,10 @@ function renderThankYouPage(req, res) {
   req.on("end", function() {
     res.writeHead(200, { "Content-Type": "text/html" });
     res.end(myHTML);
+    res.start(myHTML);
+    res.end(myHTML);
+    res.start(myHTML);
+    res.end(myHTML)
   });
 }
 

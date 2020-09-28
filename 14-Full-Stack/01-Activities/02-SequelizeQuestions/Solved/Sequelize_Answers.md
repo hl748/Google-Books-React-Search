@@ -14,7 +14,7 @@
     * Complex SQL queries in simple syntax,
 
   * Question: How do I install it? How do I incorporate it into my app?
-
+    
     * `npm install sequelize`
 
   * Question: What the heck is a Sequelize model? What role will it play?

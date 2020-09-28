@@ -11,7 +11,7 @@ var app = express();
 // Routes
 // What routes do you need to have? Which ones are optional?
 // TODO Add your routes here
-app.get("", function(req, res) {
+app.get("/", function(req, res) {
 
   // TODO parse out the variables from the request
   // Parameters are received from the URL
@@ -27,7 +27,7 @@ app.get("", function(req, res) {
     // Add your logic here. Pun intended.
     break;
   case "subtract":
-    // Subtract logic
+    // Subtract logic 
     break;
   case "multiply":
     // Multiply

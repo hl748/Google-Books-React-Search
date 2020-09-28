@@ -9,7 +9,7 @@ const music = {
 // Use an h2 element for the title and a p element for artist and title
 const songSnippet = `
   <div class="song">
-
+  
   </div>
 `;
 

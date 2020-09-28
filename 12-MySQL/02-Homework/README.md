@@ -72,13 +72,13 @@ How do you deliver this? Here are some guidelines:
 
 * You may wish to include a `seed.sql` file to pre-populate your database. This will make development of individual features much easier.
 
-* Focus on getting the basic functionality completed before working on more advanced features.
-
+* Focus on getting the basic functionality completed before working on more 
 * Review the week's activities for a refresher on MySQL.
 
 * Check out [SQL Bolt](https://sqlbolt.com/) for some extra MySQL help.
 
 ## Minimum Requirements
+
 
 * Functional application.
 
@@ -123,7 +123,6 @@ Follow these guidelines for committing:
 * Test your application before you commit to ensure functionality at every step in the development process.
 
 We would like you to have well over 200 commits by graduation, so commit early and often!
-
 
 ## Submission on BCS
 

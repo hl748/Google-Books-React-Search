@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Home Page</h1>
+    <h2>Topics in Boot Camp</h2>
+    <p>HTML</p>
+    <p>CSS</p>
+    <p>JavaScript</p>
+    <p>Vanilla JavaScript</p>
+    <p>jQuery</p>
+    <p>AJAX</p>
+    <p>Node.js</p>
+    <p>ES6</p>
+    <p>Constructors</p>
+    <p>Testing</p>
+    <p>Classes</p>
+    <p>HTTP</p>
+    <p>Express</p>
+    <p>MySQL</p>
+    <script>
+    const characters = [0, 1, 2, 3, 4, 5, "Word", "Phrase", "Sentence"]
+    for (var i = 5; i < characters.length; i++){
+    const length = JSON.stringify(characters.length);
+    console.log(length);
+    console.log(length[0]);
+    console.log(characters[7].toUpperCase(characters[7][0]));
+    alert("HELP ME WITH COMING UP WITH A " + characters[8])
+    const phrase = prompt("Can you help me write a better phrase?")
+    const decide = confirm("Yeah or No?")
+    if (phrase === "Yeah"){
+        alert("Yeah? Okay")
+    }
+    else {
+        alert("Can you say yeah?")
+        return phrase;
+    }
+  }
+  if (decide === true) {
+    alert("Great!")
+  }
+  else {
+      alert("Why not man? What's wrong with you bro?")
+  }
+    </script>
+</body>
+</html>

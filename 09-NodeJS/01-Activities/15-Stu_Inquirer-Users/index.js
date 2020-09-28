@@ -9,23 +9,34 @@ inquire
     message: 'What is your name?'
     },
     {
-        name: 'languages',
-        type: 'input', 
-        message: 'What languages do you know?'
+    name: 'languages',
+    type: 'input', 
+    message: 'What languages do you know?'
     },
     {
     name: 'communication',
     type: 'input',
     message: 'What is your preferred method of communication?'
-    }]
+    }, 
+    {
+      name: 'Frequency',
+      type: 'choice', 
+      message: 'How often do you communicate?',
+      choices: ["Once a week","Three times a week","Everyday","5 times every day"]
+      },
+      {
+        name: 'languages',
+        type: 'rawlist', 
+        message: 'What languages do you know?'
+        }]
 ).then(function (answers) {
-    fs.writeFile("log.txt", inquirer, function(err) {
+    fs.writeFile("log.txt", inquirer, function(error) {
 
-        if (err) {
-          return console.log(err);
+        if (error) {
+          return console.log(error);
         }
-      
-        console.log("Success!");
+      const success = "Success!"
+        console.log(success);
       
       });
 })

@@ -94,6 +94,8 @@ If you haven't run into any errors at this point, you should be able to proceed 
 
 12. Click on settings. Then, scroll down until you see "Domains". Note the URL listed under Heroku Domain.
 
+<!-- You just do something to get the job done and do it: -->
+
 13. Navigate to that URL in your browser. If all went well, you should see your web application live online!
 
 ### Troubleshooting
