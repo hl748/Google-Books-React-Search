@@ -1,7 +1,7 @@
 const mysql = require("mysql")
 const inquirer = require("inquirer")
 const consoleTable = require("console.table")
-const queries = require("./queries.js")
+const Queries = require("./queries.js")
 const util = require("util")
 
 
@@ -20,7 +20,7 @@ const connection = mysql.createConnection({
     }
   });
 
-  const newQuery = new queries (connection)
+  const newQuery = new Queries (connection)
 
 const questions = () => {return inquirer.prompt(
     [
@@ -182,6 +182,7 @@ function loop () {
      
         }
         console.log(answers.final)
+        return answers.final
     })
 }
 

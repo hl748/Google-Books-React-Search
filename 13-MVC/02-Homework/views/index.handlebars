@@ -1,0 +1,29 @@
+
+<h1>Eat Da Burger</h1>
+<h2>Burger Input</h2>
+<form>
+    <label for="fname">Add a Burger:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <input type="submit" value="Add Burger" id="submitButton">
+</form>
+<aside>
+<h1>Burgers Left</h1>
+{{#each burgers}}
+{{#unless devoured}}
+{{burger_name}}
+<button class="devourButton" data-id="{{id}}">Devour</button>
+{{/unless}}
+{{/each}}
+
+
+</aside>
+<main>
+<h1>Burgers Eaten</h1>
+{{#each burgers}}
+{{#if devoured}}
+{{burger_name}}
+{{/if}}
+{{/each}}
+</main>
+
+

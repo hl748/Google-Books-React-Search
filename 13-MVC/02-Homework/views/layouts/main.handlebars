@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Example App</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <link rel="stylesheet" href="/assets/css/indexstyles.css">
+</head>
+<body>
+    {{{body}}}
+    <script type="text/javascript">
+    
+    $("#submitButton").on("click", function(event){
+       console.log("something") 
+       event.preventDefault()
+       const burger = $("#fname").val()
+       $.ajax({
+        method: "POST",
+        url: "/burger",
+        data:{name:burger, devoured: false}
+        }).then(function(){
+        location.reload()
+        })
+    })
+    $(".devourButton").on("click", function(event) {
+        //event.preventDefault();
+        const burgerId =  $(this).data("id")
+        console.log("cliecked")
+       
+        $.ajax({
+            method:"PUT",
+            url:"/burger",
+            data:{id:burgerId, devoured:true}
+        }).then(function(){
+        location.reload()
+        })
+        
+    })
+    
+    </script>
+</body>
+</html>

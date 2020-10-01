@@ -30,6 +30,15 @@ app.get("/", (req, res) => {
 
 // 1. Save a note to the database's collection
 // POST: /submit
+app.get("/submit", (req,res) => {
+  db.Activity7.insert({}, (err, data) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(data)
+    }
+  });
+})
 // ===========================================
 
 // 2. Retrieve all notes from the database's collection

@@ -1,5 +1,5 @@
 const util = require("util")
-class queries 
+class Queries
     {
         constructor (connection) {
          this.query = util.promisify(connection.query).bind(connection)
@@ -61,5 +61,5 @@ class queries
 
     }
 
-module.exports = queries
+module.exports = Queries
 

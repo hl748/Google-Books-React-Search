@@ -1,18 +1,19 @@
 {
-  "name": "mongo_crud",
+  "name": "02-homework",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "dependencies": {
     "express": "^4.17.1",
-    "mongojs": "^2.6.0",
-    "morgan": "^1.10.0"
+    "express-handlebars": "^5.1.0",
+    "init": "^0.1.2",
+    "mysql": "^2.18.1",
+    "util": "^0.12.3"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "watch": "nodemon server.js"
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC"
