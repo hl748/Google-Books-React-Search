@@ -1,0 +1,12 @@
+Create a PWA!
+
+We have 3 main ingredients: 
+
+1. A Manifest File - provides our devices with metadata about the application 
+(icons, start url's, naming, etc.) to support the download process
+
+2. Service Workers - help us manage and respond to requests sent from the frontend when 
+we don't have a valid connection 
+
+3. Browser Cache (Cache API) - gives us a place to store files / responses so that we can 
+still access resources that our app needs without a web connection 
