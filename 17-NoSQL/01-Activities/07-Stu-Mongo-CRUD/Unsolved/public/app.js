@@ -3,7 +3,7 @@ function getResults() {
   $("#results").empty();
   // Grab all of the current notes
   $.getJSON("/all", function(data) {
-    // For each note...
+    console.log(data)
     for (var i = 0; i < data.length; i++) {
       // ...populate #results with a p-tag that includes the note's title and object id
       $("#results").prepend("<p class='data-entry' data-id=" + data[i]._id + "><span class='dataTitle' data-id=" +
@@ -16,7 +16,8 @@ function getResults() {
 getResults();
 
 // When the #make-new button is clicked
-$(document).on("click", "#make-new", function() {
+$(document).on("click", "#make-new", function(event) {
+  event.preventDefault();
   // AJAX POST call to the submit route on the server
   // This will take the data from the form and send it to the server
   $.ajax({
@@ -31,6 +32,7 @@ $(document).on("click", "#make-new", function() {
   })
   // If that API call succeeds, add the title and a delete button for the note to the page
     .then(function(data) {
+      console.log(data)
     // Add the title and delete button to the #results section
       $("#results").prepend("<p class='data-entry' data-id=" + data._id + "><span class='dataTitle' data-id=" +
       data._id + ">" + data.title + "</span><span class='delete'>X</span></p>");
@@ -88,11 +90,12 @@ $(document).on("click", ".dataTitle", function() {
     url: "/find/" + selected.attr("data-id"),
     success: function(data) {
       // Fill the inputs with the data that the ajax call collected
-      $("#note").val(data.note);
-      $("#title").val(data.title);
+      $("#note").val(data[0].note);
+      $("#title").val(data[0].title);
       // Make the #action-button an update button, so user can
       // Update the note s/he chooses
-      $("#action-button").html("<button id='updater' data-id='" + data._id + "'>Update</button>");
+      $("#action-button").html("<button id='updater' data-id='" + data[0]._id + "'>Update</button>");
+      console.log(data[0])
     }
   });
 });
@@ -104,7 +107,9 @@ $(document).on("click", "#updater", function() {
   // Make an AJAX POST request
   // This uses the data-id of the update button,
   // which is linked to the specific note title
-  // that the user clicked before
+  // that the user clicked before 
+  console.log( selected.attr("data-id"))
+  console.log( selected ) 
   $.ajax({
     type: "POST",
     url: "/update/" + selected.attr("data-id"),

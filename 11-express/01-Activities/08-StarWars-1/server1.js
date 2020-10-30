@@ -27,7 +27,13 @@ var darthmaul = {
 
 // YOUR CODE GOES HERE
 
-//
+app.get("/", function(req, res) {
+  res.send("Hello")
+})
+
+app.post("/portfolio", function(req, res) {
+  res.post("How are you?")
+})
 
 // Routes
 // ===========================================================

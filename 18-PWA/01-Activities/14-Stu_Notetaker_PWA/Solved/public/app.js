@@ -61,22 +61,12 @@ function updateTitleAndNote(data) {
 getResults();
 
 clear.addEventListener("click", function(e) {
-  if (e.target.matches("#clear-all")) {
+  if (e.target) {
     element = e.target;
     data_id = element.getAttribute("data-id");
     fetch("/clearall", {
       method: "delete"
     })
-      .then(function(response) {
-        if (response.status !== 200) {
-          console.log("Looks like there was a problem. Status Code: " + response.status);
-          return;
-        }
-        clearTodos();
-      })
-      .catch(function(err) {
-        console.log("Fetch Error :-S", err);
-      });
   }
 });
 

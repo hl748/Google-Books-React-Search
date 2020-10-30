@@ -1,4 +1,4 @@
-# Unit 19 React Homework: Employee Directory
+# Unit 20 React Homework: Employee Directory
 
 ## Overview
 
@@ -21,7 +21,7 @@ The user should be able to:
   * Sort the table by at least one category
 
   * Filter the users by at least one property.
-
+  
 ## Commit Early and Often
 
 One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:

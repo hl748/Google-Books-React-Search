@@ -189,30 +189,38 @@ function populateChart(data) {
 function duration(data) {
   let durations = [];
 
-  data.forEach(workout => {
-    workout.exercises.forEach(exercise => {
-      durations.push(exercise.duration);
+  data.forEach(day => {
+    let total = 0
+    day.exercises.forEach(exercise => {
+      total += exercise.duration
+      
     });
+    durations.push(total);
   });
 
   return durations;
 }
 
 function calculateTotalWeight(data) {
-  let total = [];
+  let totals = [];
 
   data.forEach(workout => {
+    let total = 0
     workout.exercises.forEach(exercise => {
-      total.push(exercise.weight);
+      if (exercise.weight){
+      total += exercise.weight
+      } 
+
     });
+    totals.push(total);
   });
 
-  return total;
+  return totals;
 }
 
 function workoutNames(data) {
   let workouts = [];
-
+  
   data.forEach(workout => {
     workout.exercises.forEach(exercise => {
       workouts.push(exercise.name);

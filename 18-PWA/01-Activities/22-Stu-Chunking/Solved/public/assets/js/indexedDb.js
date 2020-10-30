@@ -16,7 +16,7 @@ export function useIndexedDb(databaseName, storeName, method, object) {
 
     request.onsuccess = function(e) {
       db = request.result;
-      tx = db.transaction(storeName, "readwrite");
+      tx = db.(storeName, "readwrite");
       store = tx.objectStore(storeName);
 
       db.onerror = function(e) {

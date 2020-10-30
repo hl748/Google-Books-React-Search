@@ -10,6 +10,17 @@
     <h1>Open Your Developer Tools > Application > IndexedDB</h1>
     <script>
     // CODE HERE
+    const request = window.indexedDB.open("example",1)
+
+    request.onupgradeneeded = ({ target }) => {
+      const db = target.result
+      const store = db.createObjectStore("example")
+    }
+
+    request.onsuccess = event => {
+      console.log(request.result)
+    }
+
     </script>
   </body>
 </html>

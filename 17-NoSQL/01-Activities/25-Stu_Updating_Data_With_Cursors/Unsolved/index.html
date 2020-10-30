@@ -40,6 +40,19 @@
         const getCursorRequest = toDoListStore.openCursor();
         getCursorRequest.onsuccess = e => {
           // CODE HERE
+          const cursorRequest = e.target.result
+              if (cursorRequest) {
+            if(cursorRequest.value.status === "in-progress") {
+              const value = cursorRequest.value;
+              value.status = "complete";
+              cursorRequest.update(value);
+            }
+            cursorRequest.continue();
+          } else {
+            console.log("no docs remaining");
+          }
+
+         
         };
       };
     </script>

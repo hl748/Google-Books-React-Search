@@ -1,0 +1,19 @@
+  .background {
+    height: 200px;
+    position: relative;
+  }
+  
+  .background::after {
+    display: block;
+    background: black;
+  }
+  
+  .background h1, .background h2 {
+    color: gray;
+  }
+  
+  .background h1 {
+    font-size: 60px;
+    padding-top: 100px;
+  }
+  

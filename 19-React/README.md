@@ -18,7 +18,9 @@ In 2013, the developers at Facebook released React, a library that addresses thi
 ## Comprehension Check
 You will be employer-ready if you can answer the following questions:
 1. What is the virtual DOM?
+The place that the browser saves what was newly created for the DOM before it is compared to the real DOM and selected based on whether it changed and updated on the browser
 2. How does one implement a stateful component? 
+One implements a stateful component by
 3. What does it mean to mutate state? 
 
 ## Learning Objectives

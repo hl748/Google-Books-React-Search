@@ -13,8 +13,8 @@ const data = {
 };
 
 Example.create(data)
-  .then(dbExample => {
-    console.log(dbExample);
+  .then(zoo => {
+    console.log(zoo);
   })
   .catch(({ message }) => {
     console.log(message);

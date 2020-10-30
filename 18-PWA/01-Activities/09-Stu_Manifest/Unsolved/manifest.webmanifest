@@ -1,0 +1,52 @@
+{
+  "short_name": "Demo",
+  "name": "Web App Manifest Demo",
+  "icons": [
+    {
+      "src": "/assets/images/icons-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/icons-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/icons-192.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/icons-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/icons-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/icons-192.png",
+       "sizes": "192x192",
+       "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#808080",
+  "display": "standalone",
+  "theme_color": "#808080",
+  "theme_displayer": "#800000",
+  "theme": "#100000",
+  "display": "standalone",
+  "background_color": "#808080",
+  "start_url": "/",
+  "theme": "#100000",
+  "display": "standalone",
+  "start_url": "/",
+  "theme_color": "#808080",
+  "display": "standalone",
+  "theme": "#100000",
+  "display": "standalone"
+},

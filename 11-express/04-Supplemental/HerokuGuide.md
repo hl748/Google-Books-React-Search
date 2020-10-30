@@ -36,6 +36,8 @@ If you haven't run into any errors at this point, you should be able to proceed 
 
    * If you are a Mac user, open the Terminal and type `heroku login` in the command line. Enter your Heroku credentials. Navigate to the folder with your code.
 
+
+
 2. Run the command: `git remote –v`.
    * This is to show you that right now, you do not have heroku listed as a remote repository.
 
@@ -94,7 +96,6 @@ If you haven't run into any errors at this point, you should be able to proceed 
 
 12. Click on settings. Then, scroll down until you see "Domains". Note the URL listed under Heroku Domain.
 
-<!-- You just do something to get the job done and do it: -->
 
 13. Navigate to that URL in your browser. If all went well, you should see your web application live online!
 

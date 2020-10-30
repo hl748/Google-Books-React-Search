@@ -9,17 +9,47 @@
   <body>
     <h1>Open Your Developer Tools > Application > IndexedDB</h1>
     <script>
-      const request = window.indexedDB.open("toDoList", 1);
-      
+      const request = window.indexedDB.open("toDoList", 5);
       request.onupgradeneeded = event => {
         const db = event.target.result;
-       // CODE HERE
+      // CODE HERE
+       const objectStorage = db.createObjectStore("List",{ keyPath: "listID"})
+        objectStorage.createIndex("statusIndex","status")
+        console.log(objectStorage)
+
       }
+      request.onerror = event => console.log(event.target.errorCode)
 
       
-      request.onsuccess = () => {
-        const db = request.result;
+      request.onsuccess = (event) => {
+        console.log("Hi it worked")
+        
+        const db = event.target.result;
         // CODE HERE
+        const transaction = db.transaction(["List"],"readwrite")
+        const toDoListStore = transaction.objectStore("List")
+        const statusIndex = toDoListStore.index("statusIndex")
+        console.log(toDoListStore)
+       
+
+        // toDoListStore.add({ listID: "2", status: "in-progress" });
+        // toDoListStore.add({ listID: "3", status: "complete" });
+        // toDoListStore.add({ listID: "4", status: "backlog" });
+
+        const request = toDoListStore.get("1")
+        console.log(request)
+        request.onsuccess = (event) => {
+        console.log(event.target.result)
+        }
+        transaction.onabort = function() {
+        console.log("Error", transaction.error);
+        };
+
+        const request2 = toDoListStore.getAll()
+        console.log(request2)
+        request2.onsuccess = (event) => {
+          console.log(event.target.result)
+        }
       };
 
     </script>

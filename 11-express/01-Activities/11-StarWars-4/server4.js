@@ -51,6 +51,10 @@ app.get("/api/characters/:character", (req, res) => {
     }
   }
 
+  characters.forEach(
+    res.json()
+  )
+
   // Otherwise display "No character found"
   return res.send("No character found");
 });
