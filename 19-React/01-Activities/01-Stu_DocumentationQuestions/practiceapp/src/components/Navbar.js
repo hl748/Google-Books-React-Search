@@ -21,6 +21,10 @@ function Navbar() {
   return (
     <nav style={styles.navbarStyle} className="navbar">
       <a href="/">Welcome</a>
+      <a href="/">Welcome</a>
+      <a href="/">Welcome</a>
+      <a href="/">Welcome</a>
+      <a href="/">Welcome</a>
     </nav>
   );
 }

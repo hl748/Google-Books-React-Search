@@ -10,7 +10,7 @@
 var arraySize = 40;
 
 // // Case 2 - Large set of Numbers
-// var arraySize = 400000;
+var arraySize = 400000;
 
 var array = [];
 for (var index = 0; index < arraySize; index++) {
