@@ -9,14 +9,15 @@ function Routes () {
         <Router>
 
         <Switch>
-          <Route path="/">
+        <Route exact path='/'>
           <Navigation />
-            <Search />
-          </Route>
-          <Route path="/saved">
+          <Search />
+        </Route>
+        <Route exact path='/saved'>
           <Navigation />
-            <Saved />
-          </Route>
+          
+          <Saved />
+        </Route>
         </Switch>
         </Router>
     )

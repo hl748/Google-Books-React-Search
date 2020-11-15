@@ -1,11 +1,22 @@
-import React from "react"
+import React, { useEffect, useState } from 'react';
 import "./results.css"
+import GetBooks from "./getbooks-ajax"
 
-function Results () {
+
+
+function Results() {
+useEffect(() => {
+    GetBooks().then((response) => {console.log(response)})
+
+},[])
     return (
-        <div class="container">
-        <h1>Results</h1>
-        <div id="books"></div>
+        <div className="container">
+            <h1>Results</h1>
+
+
+            <div id="books" >
+
+            </div>
         </div>
     )
 }
