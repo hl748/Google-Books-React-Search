@@ -4,11 +4,14 @@ import Submit from "./submit-ajax"
 import Delete from "./delete-ajax"
 import { useEffect, useState } from "react"
 import GoogleRequest from "./google-request"
+import axios from "axios"
 
 
 function SearchBar () {
     const SearchGoogle = (input) => {
-        GoogleRequest(input).then((response) => {console.log(response)})
+        GoogleRequest(input).then(
+            (response) => {console.log(response.data.items[0].volumeInfo.title)
+            })
     }
         const [value, setValue] = useState("")
     return (
@@ -21,7 +24,8 @@ function SearchBar () {
       console.log(event.target.value)
   }}/>
     </form>
-        <button onClick={() => SearchGoogle(value)}>Search</button>
+        <button onClick={() => {SearchGoogle(value)}}>Search</button>
+        <button onClick={() => Submit(value)}>Submit</button>
     </div>
         </div>
     )

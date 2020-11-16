@@ -2,7 +2,7 @@ import axios from "axios"
 
 function GoogleRequest (input) {
     console.log("Google Request")
-    return axios.get("/api/google/", {params: {q:"title:" + input}})
+    return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + input)
 }
 
 export default GoogleRequest;

@@ -5,10 +5,8 @@ import GetBooks from "./getbooks-ajax"
 
 
 function Results() {
-useEffect(() => {
-    GetBooks().then((response) => {console.log(response)})
+    GetBooks()
 
-},[])
     return (
         <div className="container">
             <h1>Results</h1>

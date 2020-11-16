@@ -1,0 +1,1 @@
+Hey Logan, I made an api call to google books for my homework for getting the books into my div, but the api returned my book in the form a long string. I can't parse the string and I can't use the objects in the string. What should I do to grab the information I need from the long string?
