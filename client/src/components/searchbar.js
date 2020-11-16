@@ -5,12 +5,25 @@ import Delete from "./delete-ajax"
 import { useEffect, useState } from "react"
 import GoogleRequest from "./google-request"
 import axios from "axios"
+import "jquery"
+import $ from "jquery"
 
 
 function SearchBar () {
     const SearchGoogle = (input) => {
         GoogleRequest(input).then(
-            (response) => {console.log(response.data.items[0].volumeInfo.title)
+            (response) => {
+                $("#books").empty()
+                for (var i = 0; i < response.data.items.length; i++) {
+                $("#books").prepend("<h1 " + "id=book" + i + ">" + JSON.stringify(response.data.items[i].volumeInfo.title) + "</h1>")
+                $("#book" + i).on("click", function(){
+                    const book = $("#book" + i).html()
+                    console.log(book)
+                })
+            }
+            for(var i = 0; i<response.data.items.length; i++){
+                $("#books").css("background-color","green")
+            }
             })
     }
         const [value, setValue] = useState("")
