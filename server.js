@@ -1,9 +1,9 @@
 const express = require("express");
 const path = require("path");
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const app = express();
 const mongoose = require("mongoose");
-const Book = require("../../schema")
+const Book = require("./schema")
 const mongojs = require("mongo")
 
 // Define middleware here
@@ -49,7 +49,7 @@ app.get("/api/books", (req, res) => {
 
 app.post("/api/books", (req, res) => {
   db.Book.insert(req.body, (err, data) => {
-    const Book = require("../../schema")
+    const Book = require("./schema")
     console.log(data)
     if (err) {
       console.log(err);
