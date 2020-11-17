@@ -5,8 +5,6 @@ function Submit (book) {
   return axios.post("http://localhost:3000/api/books", book)
 }
 
-
-
 export default Submit;
 
   

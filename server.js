@@ -3,7 +3,7 @@ const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const mongoose = require("mongoose");
-const Book = require("./schema")
+const Book1 = require("./schema")
 const mongojs = require("mongo")
 
 // Define middleware here
@@ -15,7 +15,7 @@ app.use(express.json());
 const db = mongojs
 
 // Define API routes here
-mongoose.connect(process.env.MONGO_URI || "mongodb://localhost/3001", {
+mongoose.connect(process.env.MONGO_URI || "mongodb://localhost/BookNew", {
   useNewUrlParser: true,
   useFindAndModify: false,
   useUnifiedTopology: true
@@ -34,27 +34,27 @@ app.get("/api/google", (req,res) => {
   )
 })
 app.get("/api/books", (req, res) => { 
-  Book.create({}, (err, data) => {
+  Book1.find({}, (err, data) => {
     console.log("testing api/books.data:", data, "error:", err)
     if (err) {
       console.log(err);
     } else {
-      res.json(data[0])
+      res.json(data)
       console.log(data)
   }
 })
 });
 
-app.post("/api/books", (req, String, res) => {
-  console.log("Hello", req.body, String)
-  Book.create(req)
+app.post("/api/books", (req, res) => {
+  console.log("Hello", req.body)
+  Book1.create(req.body)
   .then(dbUser => {
     res.json(dbUser);
   })
 });
 
 app.delete("/api/books/:id", (req, res) => {
-  Book.remove({ _id: mongoose.ObjectId(req.params.id) }, (err, data) => {
+  Book1.remove({ _id: mongoose.ObjectId(req.params.id) }, (err, data) => {
     if (err) {
       console.log(err);
     } else {
@@ -65,7 +65,7 @@ app.delete("/api/books/:id", (req, res) => {
 });
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  res.sendfile(path.join(__dirname, "./client/public/index.html"));
 });
 
 app.listen(PORT, () => {

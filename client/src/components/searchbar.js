@@ -9,14 +9,14 @@ import "jquery"
 import $ from "jquery"
 
 
-function SearchBar () {
+function SearchBar (props) {
     const SearchGoogle = (input) => {
         GoogleRequest(input).then(
             (response) => {
                 $("#books").empty()
                 for (var i = 0; i < response.data.items.length; i++) {
                 $("#books").prepend("<h1 " + "id=" + i + " class=book>" + JSON.stringify(response.data.items[i].volumeInfo.title) + "</h1>")
-                
+                $("#")
             }
             $(".book").on("click", function(){
                 console.log("Clicked")         
