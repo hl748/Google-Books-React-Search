@@ -15,7 +15,7 @@ app.use(express.json());
 const db = mongojs
 
 // Define API routes here
-mongoose.connect(process.env.PORT || "mongodb://localhost/Book", {
+mongoose.connect(process.env.MONGO_URI || "mongodb://localhost/Book", {
   useNewUrlParser: true,
   useFindAndModify: false,
   useUnifiedTopology: true
