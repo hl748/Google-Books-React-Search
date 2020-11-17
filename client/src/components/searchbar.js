@@ -15,12 +15,19 @@ function SearchBar () {
             (response) => {
                 $("#books").empty()
                 for (var i = 0; i < response.data.items.length; i++) {
-                $("#books").prepend("<h1 " + "id=book" + i + ">" + JSON.stringify(response.data.items[i].volumeInfo.title) + "</h1>")
-                $("#book" + i).on("click", function(){
-                    const book = $("#book" + i).html()
-                    console.log(book)
-                })
+                $("#books").prepend("<h1 " + "id=" + i + " class=book>" + JSON.stringify(response.data.items[i].volumeInfo.title) + "</h1>")
+                
             }
+            $(".book").on("click", function(){
+                console.log("Clicked")         
+                const thisText = $(this).text()
+                let number
+                localStorage.setItem("book" + number, thisText)
+                console.log(thisText, "thetext")
+                number++
+                console.log(number)
+                axios.post("/api/books", thisText)
+})
             for(var i = 0; i<response.data.items.length; i++){
                 $("#books").css("background-color","green")
             }
