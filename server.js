@@ -11,19 +11,16 @@ app.use(express.limit("1mb"))
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
-}
 const db = mongojs
 
 // Define API routes here
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/budget", {
+mongoose.connect(process.env.PORT || "mongodb://localhost/Book", {
   useNewUrlParser: true,
-  useFindAndModify: false
+  useFindAndModify: false,
+  useUnifiedTopology: true
 });
 
-Book.create()
- .then(console.log())
 
 
 // Send every other request to the React app
@@ -37,31 +34,27 @@ app.get("/api/google", (req,res) => {
   )
 })
 app.get("/api/books", (req, res) => { 
-  db.Book.find({}, (err, data) => {
+  Book.find({}, (err, data) => {
+    console.log("testing api/books.data:", data, "error:", err)
     if (err) {
       console.log(err);
     } else {
-      res.json(data)
+      res.json(data[0])
       console.log(data)
   }
 })
 });
 
 app.post("/api/books", (req, res) => {
-  db.Book.insert(req.body, (err, data) => {
-    const Book = require("./schema")
-    console.log(data)
-    if (err) {
-      console.log(err);
-    } else {
-      res.send(data)
-      console.log(data)
-    }
-  });
+  console.log("Hello")
+  Book.create(req)
+  .then(dbUser => {
+    res.json(dbUser);
+  })
 });
 
 app.delete("/api/books/:id", (req, res) => {
-  db.Book.remove({ _id: mongoose.ObjectId(req.params.id) }, (err, data) => {
+  Book.remove({ _id: mongoose.ObjectId(req.params.id) }, (err, data) => {
     if (err) {
       console.log(err);
     } else {
