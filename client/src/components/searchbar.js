@@ -26,7 +26,7 @@ function SearchBar () {
                 console.log(thisText, "thetext")
                 number++
                 console.log(number)
-                axios.post("/api/books", thisText)
+                axios.post("/api/books", {String: thisText})
 })
             for(var i = 0; i<response.data.items.length; i++){
                 $("#books").css("background-color","green")

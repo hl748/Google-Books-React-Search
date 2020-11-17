@@ -15,7 +15,7 @@ app.use(express.json());
 const db = mongojs
 
 // Define API routes here
-mongoose.connect(process.env.MONGO_URI || "mongodb://localhost/Book", {
+mongoose.connect(process.env.MONGO_URI || "mongodb://localhost/3001", {
   useNewUrlParser: true,
   useFindAndModify: false,
   useUnifiedTopology: true
@@ -34,7 +34,7 @@ app.get("/api/google", (req,res) => {
   )
 })
 app.get("/api/books", (req, res) => { 
-  Book.find({}, (err, data) => {
+  Book.create({}, (err, data) => {
     console.log("testing api/books.data:", data, "error:", err)
     if (err) {
       console.log(err);
@@ -45,8 +45,8 @@ app.get("/api/books", (req, res) => {
 })
 });
 
-app.post("/api/books", (req, res) => {
-  console.log("Hello")
+app.post("/api/books", (req, String, res) => {
+  console.log("Hello", req.body, String)
   Book.create(req)
   .then(dbUser => {
     res.json(dbUser);
